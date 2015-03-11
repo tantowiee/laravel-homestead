@@ -87,7 +87,7 @@
 		<!-- ./ navbar -->
 
 		<!-- Container -->
-		<div class="container">
+		<div class="container" id="content-container">
 			<!-- Notifications -->
 			@include('notifications')
 			<!-- ./ notifications -->
@@ -115,6 +115,18 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 
+        <!--
+        	Auto Reload content every 30 second
+        -->
+        <script>
+        	$(function(){
+        		setInterval(function(){
+        			$.get('/',function(data){ 
+        				$('#content-container').html(data);
+        			});
+        		}, 30000);
+        	});
+        </script>
         @yield('scripts')
 	</body>
 </html>
