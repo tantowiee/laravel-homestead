@@ -28,6 +28,9 @@ return array(
 
 	'default' => 'mysql',
 
+	# add connection to mongodb
+	# 'default' => 'mongodb', 
+
 	/*
 	|--------------------------------------------------------------------------
 	| Database Connections
@@ -56,8 +59,8 @@ return array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'database'  => 'laravel',
-			'username'  => 'laravel',
-			'password'  => '',
+			'username'  => 'homestead',
+			'password'  => 'secret',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
