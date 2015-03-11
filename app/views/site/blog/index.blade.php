@@ -1,4 +1,5 @@
-@extends('site.layouts.default')
+{{-- Add conditional if layout request ajax --}}
+@extends(((Request::ajax()) ? 'site.layouts.ajax' : 'site.layouts.default'))
 
 {{-- Content --}}
 @section('content')
