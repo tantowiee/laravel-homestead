@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Acme\\Composers\\CommentComposer' => $baseDir . '/app/Acme/Composers/CommentComposer.php',
+    'AddColumnGender' => $baseDir . '/app/database/migrations/2015_03_11_044055_add_column_gender.php',
     'AdminBlogsController' => $baseDir . '/app/controllers/admin/AdminBlogsController.php',
     'AdminCommentsController' => $baseDir . '/app/controllers/admin/AdminCommentsController.php',
     'AdminController' => $baseDir . '/app/controllers/AdminController.php',
