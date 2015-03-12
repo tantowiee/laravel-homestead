@@ -33,6 +33,22 @@
         }
 		@section('styles')
 		@show
+		.navbar-custom {
+		    background-color:#DE6DCF;
+		    color:#ffffff;
+		    border-radius:0;
+		}
+
+		.navbar-custom .navbar-nav > li > a {
+		    color:#fff;
+		}
+		.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+		    color: #ffffff;
+		    background-color:#6DDE7C;
+		}
+		.navbar-custom .navbar-brand {
+		    color:#eeeeee;
+		}
 		</style>
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -53,7 +69,11 @@
 		<!-- To make sticky footer need to wrap in a div -->
 		<div id="wrap">
 		<!-- Navbar -->
+        @if (Auth::user()->gender == "M")
 		<div class="navbar navbar-default navbar-inverse navbar-fixed-top">
+		@else
+		<div class="navbar navbar-custom navbar-fixed-top">
+		@endif
 			 <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
